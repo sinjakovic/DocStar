@@ -1,0 +1,29 @@
+<div>
+    <div class="modal-header">
+        <h3>Apply</h3>
+    </div>
+
+    <div class="modal-body">
+        <form>
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" class="form-control" style="width:100%" id="firstName" required ng-model="newUser.firstName" >
+                <label for="lastName">Last Name:</label>
+                <input type="text" class="form-control" style="width:100%" id="lastName" required ng-model="newUser.lastName" >
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" style="width:100%" id="username" required ng-model="newUser.username" >
+                <label for="password">Password:</label>
+                <input type="text" class="form-control" style="width:100%" id="password" required ng-model="newUser.password" >
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" style="width:100%" id="email" required ng-model="newUser.email" >
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="text" class="form-control" style="width:100%" id="phoneNumber" required ng-model="newUser.phoneNumber" >
+            </div>
+        </form>
+    </div>
+
+    <div class="modal-footer">
+        <button  class="btn btn-sm btn-danger" ng-click="cancel()">Cancel</button>
+        <button type="submit" class="btn btn-sm btn-primary" ng-click="create()">Create</button>
+    </div>
+</div>

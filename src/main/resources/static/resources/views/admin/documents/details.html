@@ -1,0 +1,33 @@
+<div>
+    <ol class="breadcrumb">
+        <li><a href="#/admin/documents">documents</a></li>
+        <li>details</li>
+    </ol>
+
+    <div class="page-header">
+        <h2>{{doc.title}}</h2>
+    </div>
+
+    <div class="well well-sm">
+        <span class="doc-type">Type: {{doc.type}}</span>
+        <span ng-if="doc.significant">Significant</span>
+        <span ng-if="!doc.significant">Not Significant</span>
+    </div>
+    <div class="well well-sm">
+        <div>View as:</div>
+        <ul>
+            <li><a href="{{doc.pdf_url}}">PDF</a></li>
+            <li><a href="{{doc.html_url}}">HTML</a></li>
+        </ul>
+    </div>
+
+    <p class="doc-details-abstract" ng-if="doc.abstract">{{doc.abstract}}</p>
+
+    <div ng-repeat="rating in ratings" class="panel panel-default">
+        <div class="panel-heading">
+            reviewed on {{rating.date | date:'shortDate'}}
+            <span class="pull-right">{{rating.user.lastName}}, {{rating.user.firstName}}</span>
+        </div>
+        <div class="panel-body" >{{rating.rating}} out of 5</div>
+    </div>
+</div>

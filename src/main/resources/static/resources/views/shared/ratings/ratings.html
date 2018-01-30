@@ -1,0 +1,17 @@
+<div>
+    <h2 class="page-header">Ratings</h2>
+
+    <div class="well well-sm" ng-repeat="rating in ratings">
+        <div>
+            Document Number: <a href="#/{{role}}/documents/{{rating.docNumber}}"><span class="doc-number">{{rating.docNumber}}</span></a>
+            <span class="pull-right" style="margin-left:2em;">
+				<span class="glyphicon glyphicon-hourglass"></span> {{rating.date | date : 'MM/dd/yyyy'}}
+			</span>
+
+        </div>
+
+        <div>
+            {{rating.user.firstName}} {{rating.user.lastName}} rated {{rating.rating}} out of 5
+        </div>
+    </div>
+</div>

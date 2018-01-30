@@ -1,0 +1,36 @@
+<div>
+    <div class="modal-header">
+        <h3>Apply</h3>
+    </div>
+
+    <div class="modal-body">
+        <form>
+            <div class="form-group">
+            	<div class="form-inline">
+            		<label for="isAdmin">Admin:</label>
+                	<input type="checkbox" class="form-control" style="width:100%" id="isAdmin" data-checklist-model="updateUser.roles" data-checklist-value="{name:'ROLE_ADMIN'}" >
+            	</div>
+                
+                <div class="form-inline">
+                	<label for="isUser">User:</label>
+                	<input type="checkbox" class="form-control" style="width:100%" id="isUser" data-checklist-model="updateUser.roles" data-checklist-value="{name:'ROLE_USER'}" >
+                </div>
+                
+                <div class="form-inline">
+                	<label for="isEnabled">Enabled:</label>
+                	<input type="checkbox" class="form-control" style="width:100%" id="isEnabled" ng-model="updateUser.isEnabled" ng-value="true" >
+                </div>
+                
+                <div class="form-inline">
+                	<label for="password">Password:</label>
+                	<input type="text" class="form-control" style="width:100%" id="password" ng-model="updateUser.password" >
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="modal-footer">
+        <button  class="btn btn-sm btn-danger" ng-click="cancel()">Cancel</button>
+        <button type="submit" class="btn btn-sm btn-primary" ng-click="update()">Update</button>
+    </div>
+</div>

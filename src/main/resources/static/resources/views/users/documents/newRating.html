@@ -1,0 +1,31 @@
+<div>
+    <div class="modal-header">
+        <h3>Rate</h3>
+    </div>
+
+    <div class="modal-body">
+        <form>
+            <div class="form-inline rating">
+            	<label for="star1">1</label>
+                <input type="radio" ng-model="newRating.rating" ng-value="1" id="star1">
+                
+                <label for="star2">2</label>
+                <input type="radio" ng-model="newRating.rating" ng-value="2" id="star2">
+                
+                <label for="star3">3</label>
+                <input type="radio" ng-model="newRating.rating" ng-value="3" id="star3">
+                
+                <label for="star4">4</label>
+                <input type="radio" ng-model="newRating.rating" ng-value="4" id="star4">
+                
+                <label for="star5">5</label>
+                <input type="radio" ng-model="newRating.rating" ng-value="5" id="star5">
+            </div>
+        </form>
+    </div>
+
+    <div class="modal-footer">
+        <button  class="btn btn-sm btn-danger" ng-click="cancel()">Cancel</button>
+        <button type="submit" class="btn btn-sm btn-primary" ng-click="rate()">Rate</button>
+    </div>
+</div>

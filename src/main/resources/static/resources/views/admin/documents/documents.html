@@ -1,0 +1,44 @@
+<div>
+    <h2 class="page-header">Documents</h2>
+    <div class="well well-sm">
+        <div style="margin-bottom:1em;">
+            <input type="text" class="input-sm form-control" placeholder="Search for title"
+                   ng-model="service.filter.title">
+        </div>
+
+        <div style="margin-bottom:1em;">
+            <input type="text" class="input-sm form-control" placeholder="Search for zip"
+                   ng-model="service.filter.zip">
+        </div>
+
+        <div>
+            <span style="margin-right:2em;">
+                <label class="radio-inline">
+	  				<input type="checkbox" ng-model="service.filter.significance" ng-value="true"> Significant
+				</label>
+				<label class="radio-inline">
+	  				Type:
+                    <select ng-model="service.filter.type">
+                        <option value="RULE">Final Rule</option>
+                        <option value="PRORULE">Proposed Rule</option>
+                        <option value="NOTICE">Notice</option>
+                        <option value="RULE">Presidential Document</option>
+                    </select>
+				</label>
+            </span>
+            <span ng-show="service.dirty()" class="pull-right btn btn-xs btn-primary" ng-click="service.apply()" style="margin-left: 1em;">
+            <span class="glyphicon glyphicon-filter"></span>
+        </span>
+
+            <span ng-show="service.hasFilters()" class="pull-right btn btn-xs btn-default" ng-click="service.clear()">
+            <span class="glyphicon glyphicon-remove-circle"></span>
+        </span>
+        </div>
+    </div>
+
+    <div class="well well-sm" ng-repeat="doc in service.items.results">
+        <div> <!-- Job Title  with Annotations and Date Posted -->
+            <a ng-href="#/{{role}}/documents/{{doc.document_number}}"><span class="doc-title">{{doc.title}}</span></a>
+        </div>
+    </div>
+</div>

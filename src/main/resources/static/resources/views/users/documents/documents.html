@@ -1,0 +1,32 @@
+<div>
+    <h2 class="page-header">Documents</h2>
+    <div class="well well-sm">
+        <div style="margin-bottom:1em;">
+            <input type="text" class="input-sm form-control" placeholder="Search for title"
+                   ng-model="search.title">
+        </div>
+        <div>
+            <span style="margin-right:2em;">
+                <label class="radio-inline">
+	  				<input type="checkbox" ng-model="search.significant" ng-value="true"> Significant
+				</label>
+				<label class="radio-inline">
+	  				Type:
+                    <select ng-model="search.type">
+                        <option value="Rule">Final Rule</option>
+                        <option value="Proposed Rule">Proposed Rule</option>
+                        <option value="Notice">Notice</option>
+                        <option value="Presidential Document">Presidential Document</option>
+                    </select>
+				</label>
+            </span>
+
+        </div>
+    </div>
+
+    <div class="well well-sm" ng-repeat="doc in docs.results | filter:search">
+        <div>
+            <a ng-href="#/user/documents/{{doc.document_number}}"><span class="doc-title">{{doc.title}}</span></a>
+        </div>
+    </div>
+</div>

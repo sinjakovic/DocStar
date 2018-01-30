@@ -1,0 +1,17 @@
+<div>
+    <div class="modal-header">
+        <h3>Edit Users</h3>
+    </div>
+
+    <div class="modal-body">
+        <div ng-repeat="user in users" >
+                <input type="checkbox" data-checklist-model="list.updatedList" data-checklist-value="user"> {{user.firstName}} {{user.lastName}}
+        </div>
+
+    </div>
+
+    <div class="modal-footer">
+        <button  class="btn btn-sm btn-danger" ng-click="cancel()">Cancel</button>
+        <button type="submit" class="btn btn-sm btn-primary" ng-click="apply()">Update</button>
+    </div>
+</div>

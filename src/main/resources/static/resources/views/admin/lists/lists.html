@@ -1,0 +1,11 @@
+<div>
+    <div class="well">
+        <span class="btn btn-sm btn-primary" ng-click="createList()">New List</span>
+    </div>
+
+    <div class="well well-sm" ng-repeat="list in lists">
+        <div>
+            <a ng-href="#/admin/lists/{{list.id}}"><span class="list-name">{{list.name}}</span></a>
+        </div>
+    </div>
+</div>
